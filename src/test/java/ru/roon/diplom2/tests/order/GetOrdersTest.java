@@ -47,7 +47,7 @@ public class GetOrdersTest {
 
     @Before
     public void prepareData() {
-        List<String> ingredientIds = ingredientsSteps.getIngredients().stream().map(Ingredient::get_id).limit(3).collect(Collectors.toList());
+        List<String> ingredientIds = ingredientsSteps.getIngredients().stream().map(Ingredient::getId).limit(3).collect(Collectors.toList());
         User user = new User(TEST_EMAIL, TEST_PASSWORD, TEST_NAME);
         userSteps.createUser(user);
         accessToken = userSteps.loginUser(user).then().extract().path("accessToken");

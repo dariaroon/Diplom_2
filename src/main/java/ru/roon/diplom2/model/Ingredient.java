@@ -1,14 +1,17 @@
 package ru.roon.diplom2.model;
 
-public class Ingredient {
-    private String _id;
+import com.google.gson.annotations.SerializedName;
 
-    public String get_id() {
-        return _id;
+public class Ingredient {
+    @SerializedName("_id")
+    private String id;
+
+    public String getId() {
+        return id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void setId(String id) {
+        this.id = id;
     }
 
 }

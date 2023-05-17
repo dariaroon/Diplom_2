@@ -64,7 +64,7 @@ public class CreateOrderTest {
     public void testCreateOrderAuthUser() {
         List<Ingredient> ingredients = ingredientsSteps.getIngredients();
         List<String> ingredientsIds = ingredients.stream()
-            .map(Ingredient::get_id)
+            .map(Ingredient::getId)
             .limit(5)
             .collect(Collectors.toList());
         Order order = new Order(ingredientsIds);
@@ -80,7 +80,7 @@ public class CreateOrderTest {
     public void testCreateOrderNotAuthUser() {
         List<String> ingredientsIds = ingredientsSteps.getIngredients()
             .stream()
-            .map(Ingredient::get_id)
+            .map(Ingredient::getId)
             .limit(5)
             .collect(Collectors.toList());
         Order order = new Order(ingredientsIds);
